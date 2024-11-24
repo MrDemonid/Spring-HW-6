@@ -38,8 +38,20 @@ spring:
         enabled: true
 
   # swagger
-  springdoc:
-    show-actuator: false
-    swagger-ui:
-      enabled: true
-      path: /swagger-ui.html
+springdoc:
+  show-actuator: false
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+## для просмотра работы кэша
+#logging:
+#  level:
+#    org.hibernate:
+#      SQL: DEBUG
+#      type:
+#        descriptor:
+#          sql:
+#            BasicBinder: TRACE
+#
+#

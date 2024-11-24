@@ -29,6 +29,6 @@ public interface NoteService {
     /**
      * Удаление заметки.
      */
-    void deleteNote(Note note);
+    void deleteNote(Long id);
 
 }

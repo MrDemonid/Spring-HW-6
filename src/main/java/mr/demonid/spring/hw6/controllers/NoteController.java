@@ -91,12 +91,8 @@ public class NoteController {
     @Operation(summary = "Удаление заметки", description = "Удаляет заметку из БД. Полностью сбрасывает кэш.")
     @DeleteMapping("/{id}")
     ResponseEntity<Void> deleteNote(@PathVariable Long id) {
-        Optional<Note> n = noteService.getNoteById(id);
-        if (n.isPresent()) {
-            noteService.deleteNote(n.get());
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        noteService.deleteNote(id);
+        return ResponseEntity.ok().build();
     }
+
 }
